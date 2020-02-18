@@ -75,7 +75,7 @@
                         'paytmpg\pg\response\InitiateTransactionResponse', $paymentDetails->getReadTimeout(), MerchantProperties::getConnectionTimeout());
 
                 } catch (Exception $e) {
-                    LoggingUtil::addLog(LogLevel::ERROR, __CLASS__, "Exception caught in createTxnToken: " . print_r($e, true));
+                    LoggingUtil::addLog(LogLevel::ERROR, __CLASS__, "Exception caught in createTxnToken: " . $e->getTraceAsString());
                     return CommonUtil::getSDKResponse($e, new InitiateTransactionResponse(null, new InitiateTransactionResponseBody()));
                 }
             } else {
