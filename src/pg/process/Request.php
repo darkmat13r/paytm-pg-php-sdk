@@ -53,7 +53,6 @@
             LoggingUtil::addLog(LogLevel::INFO, __CLASS__, "process for request: " . print_r($request, true));
             $formattedJsonReq = JSONUtil::mapToJson($request);
 
-
             $rawJsonResponse = self::executeCurl($url, $formattedJsonReq, $readTimeout, $connTimeout);
             LoggingUtil::addLog(LogLevel::INFO, __CLASS__, "response: " . $rawJsonResponse);
 
