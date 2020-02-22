@@ -61,7 +61,7 @@
                             new InitiateTransactionResponse(null, new InitiateTransactionResponseBody()));
                     }
 
-                    LoggingUtil::addLog(LogLevel::INFO, __CLASS__, "In createTxnToken PaymentDetail: " . print_r($paymentDetails, true));
+                   // LoggingUtil::addLog(LogLevel::INFO, __CLASS__, "In createTxnToken PaymentDetail: " . print_r($paymentDetails, true));
 
                     self::validatePaymentDetailsObject($paymentDetails);
                     $request = self::createInitiateTransactionRequest($paymentDetails);
